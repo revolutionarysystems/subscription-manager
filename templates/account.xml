@@ -20,4 +20,6 @@
 	<users o:nature="collection" o:memberNature="link">
 		<user o:nature="link" o:assocType="user"/>
 	</users>
+	<paymentSubscriptionReference/>
+	<paymentSubscriptionPlan/>
 </account>

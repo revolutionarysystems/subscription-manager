@@ -6,6 +6,7 @@
 	<startTime o:nature="time"/>
 	<endTime o:nature="time"/>
 	<limit o:nature="measurement"/>
+	<paymentPlan/>
 	<features o:nature="collection" o:memberNature="object">
 		<feature>
 			<name/>
