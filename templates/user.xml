@@ -1,6 +1,6 @@
 <user xmlns:o="http://test/" o:name="User Template">
 	<status/>
-	<name/>
+	<customerName/>
 	<startTime o:nature="time"/>
 	<endTime o:nature="time"/>
 	<contactDetails/>

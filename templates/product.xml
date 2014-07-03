@@ -9,18 +9,18 @@
 	<paymentPlan/>
 	<features o:nature="collection" o:memberNature="object">
 		<feature>
-			<name/>
+			<featureName/>
 		</feature>
 	</features>
 	<limits o:nature="collection" o:memberNature="object">
 		<limit>
-			<name/>
+			<limitName/>
 			<limit o:nature="measurement"/>
 		</limit>
 	</limits>
 	<options o:nature="collection" o:memberNature="object">
 		<option>
-			<name/>
+			<optionName/>
 			<pricingBasis o:nature="link" o:assocType="basis"/>
 		</option>
 	</options>
