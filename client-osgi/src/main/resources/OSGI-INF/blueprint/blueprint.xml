@@ -21,7 +21,7 @@
         
         <route>
             <from uri="direct-vm://esb.service.subscriptionmanager.user.account"/>
-            <setHeader headerName="CamelHttpQuery"><simple>mainUser=${header.user}</simple></setHeader>
+            <setHeader headerName="CamelHttpQuery"><simple>mainUser=${header.user}&amp;depth=2</simple></setHeader>
             <recipientList>
 				<simple>{{service.endpoint}}/account/query?bridgeEndpoint=true&amp;throwExceptionOnFailure=false</simple>
 			</recipientList>
