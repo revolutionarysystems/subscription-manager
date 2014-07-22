@@ -5,7 +5,14 @@
 			<title/>
 			<startTime o:nature="time"/>
 			<endTime o:nature="time"/>
-			<governingProduct o:nature="link" o:assocType="product"/>
+			<governingProduct o:nature="link" o:assocType="product" o:refType="name"/>
+            <assets o:nature="collection" o:memberNature="object">
+                <asset o:nature="object">
+                    <name/>
+                    <value/>
+                    <status/>
+                </asset>
+            </assets>
 		</subscription>
 	</subscriptions>
 	<status/>
@@ -15,7 +22,7 @@
 	<startTime o:nature="time"/>
 	<endTime o:nature="time"/>
 	<usesUserTemplate o:nature="link" o:assocType="template" o:refType="name"/>
-	<governingProduct o:nature="link" o:assocType="product"/>
+	<governingProduct o:nature="link" o:assocType="product" o:refType="name"/>
 	<mainUser o:nature="link" o:assocType="user"/>
 	<users o:nature="collection" o:memberNature="link">
 		<user o:nature="link" o:assocType="user"/>
