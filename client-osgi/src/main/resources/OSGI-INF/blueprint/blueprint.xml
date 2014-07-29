@@ -21,12 +21,32 @@
         
         <route>
             <from uri="direct-vm://esb.service.subscriptionmanager.user.account"/>
-            <setHeader headerName="CamelHttpQuery"><simple>mainUser=${header.user}&amp;depth=2</simple></setHeader>
+            <setHeader headerName="CamelHttpQuery"><simple>mainUser=${header.user}&amp;depth=3</simple></setHeader>
             <recipientList>
 				<simple>{{service.endpoint}}/account/query?bridgeEndpoint=true&amp;throwExceptionOnFailure=false</simple>
 			</recipientList>
             <convertBodyTo type="java.lang.String"/>
             <to uri="bean:jsonPath?method=evaluate(${body}, '$[0]')"/>
+        </route>
+        
+        <route>
+            <from uri="direct-vm://esb.service.subscriptionmanager.subscription.addAsset"/>
+            <setHeader headerName="CamelHttpMethod">
+                <constant>PUT</constant>
+            </setHeader>
+            <recipientList>
+				<simple>{{service.endpoint}}/subscription/${header.subscription}/action/addAsset?bridgeEndpoint=true&amp;throwExceptionOnFailure=false</simple>
+			</recipientList>
+        </route>
+        
+        <route>
+            <from uri="direct-vm://esb.service.subscriptionmanager.subscription.updateAssets"/>
+            <setHeader headerName="CamelHttpMethod">
+                <constant>PUT</constant>
+            </setHeader>
+            <recipientList>
+				<simple>{{service.endpoint}}/subscription/${header.subscription}/action/updateAssets?bridgeEndpoint=true&amp;throwExceptionOnFailure=false</simple>
+			</recipientList>
         </route>
 
     </camelContext>

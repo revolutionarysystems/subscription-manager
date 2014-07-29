@@ -1,7 +1,10 @@
 <user xmlns:o="http://test/" o:name="User Template">
-	<status/>
-	<customerName/>
-	<startTime o:nature="time"/>
-	<endTime o:nature="time"/>
-	<contactDetails/>
+    <attributes>
+        <account o:nature="link"/>
+        <status o:nature="property"/>
+        <customerName o:nature="property"/>
+        <startTime o:nature="time"/>
+        <endTime o:nature="time"/>
+        <contactDetails o:nature="property"/>
+    </attributes>
 </user>
