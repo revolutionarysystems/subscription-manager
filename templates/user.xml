@@ -1,4 +1,11 @@
 <user xmlns:o="http://test/" o:name="User Template">
+    <viewConstraints>
+        <securityConstraint o:nature="isUser"/>
+        <securityConstraint o:nature="isAccountOwner"/>
+    </viewConstraints>
+    <creationConstraints>
+        <securityConstraint o:nature="isAdministrator"/>
+    </creationConstraints>
     <attributes>
         <account o:nature="link"/>
         <status o:nature="property"/>

@@ -1,4 +1,10 @@
 <account xmlns:o="http://test/" o:name="Account Template">
+    <viewConstraints>
+        <securityConstraint o:nature="isAccountOwner"/>
+    </viewConstraints>
+    <creationConstraints>
+        <securityConstraint o:nature="isAdministrator"/>
+    </creationConstraints>
     <attributes>
         <subscriptions o:nature="linkedObjects" o:type="subscription" o:link="account"/>
         <status o:nature="property"/>

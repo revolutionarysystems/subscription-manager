@@ -11,6 +11,8 @@
 	<name>Subscription Manager - Parent POM</name>
 
 	<modules>
+        <module>core</module>
+        <module>webapp</module>
         <module>client-osgi</module>
 	</modules>
 

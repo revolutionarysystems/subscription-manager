@@ -1,4 +1,7 @@
 <product xmlns:o="http://test/" o:name="Product Template">
+    <creationConstraints>
+        <securityConstraint o:nature="isAdministrator"/>
+    </creationConstraints>
     <attributes>
         <status o:nature="property"/>
         <title o:nature="property"/>
