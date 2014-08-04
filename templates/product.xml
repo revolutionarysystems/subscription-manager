@@ -10,19 +10,25 @@
         <paymentPlan o:nature="property"/>
         <features o:nature="collection">
             <memberTemplate o:nature="object">
-                <featureName o:nature="property"/>
+                <attributes>
+                    <featureName o:nature="property"/>
+                </attributes>
             </memberTemplate>
         </features>
         <limits o:nature="collection">
             <memberTemplate o:nature="object">
-                <limitName o:nature="property"/>
-                <limit o:nature="measurement"/>
+                <attributes>
+                    <limitName o:nature="property"/>
+                    <limit o:nature="measurement"/>
+                </attributes>
             </memberTemplate>
         </limits>
         <options o:nature="collection">
             <memberTemplate o:nature="object">
-                <optionName o:nature="property"/>
-                <!--pricingBasis o:nature="link" o:associatedType="basis"/-->
+                <attributes>
+                    <optionName o:nature="property"/>
+                    <!--pricingBasis o:nature="link" o:associatedType="basis"/-->
+                </attributes>
             </memberTemplate>
         </options>
         <usesAccountTemplate o:nature="link" o:associatedType="template" o:referenceType="name"/>
