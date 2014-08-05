@@ -23,11 +23,11 @@
         </assets>
     </attributes>
     <actions>
-        <addAsset o:nature="addToCollectionAction">
+        <addAsset o:nature="addToCollection">
             <collection>assets</collection>
             <item>asset</item>
         </addAsset>
-        <updateAssets o:nature="updateAttributeAction">
+        <updateAssets o:nature="updateAttribute">
             <attribute>assets</attribute>
         </updateAssets>
     </actions>
