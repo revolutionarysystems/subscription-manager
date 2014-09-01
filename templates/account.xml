@@ -5,6 +5,9 @@
     <creationConstraints>
         <securityConstraint o:nature="isAdministrator"/>
     </creationConstraints>
+    <views>
+            <settings o:name="account-settings"/>
+    </views>    
     <attributes>
         <subscriptions o:nature="linkedObjects" o:type="subscription" o:link="account"/>
         <status o:nature="property"/>

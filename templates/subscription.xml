@@ -21,6 +21,15 @@
                 </attributes>
             </memberTemplate>
         </assets>
+        <settings o:nature="collection">
+            <memberTemplate o:nature="object">
+                <attributes>
+                    <title o:nature="property"/>
+                    <value o:nature="property"/>
+                    <status o:nature="property"/>
+                </attributes>
+            </memberTemplate>
+        </settings>
     </attributes>
     <actions>
         <addAsset o:nature="addToCollection">
