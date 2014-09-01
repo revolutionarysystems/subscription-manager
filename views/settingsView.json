@@ -1,0 +1,25 @@
+{
+  "name": "account-settings",
+  "root": "$",
+  "templates": {
+    "$": {
+      "id": "$.id",
+      "subscriptions":"$.attributes.subscriptions.objects"
+    },
+    "$.attributes.subscriptions.objects": {
+      "id": "$.associatedObject.id",
+      "title": "$.associatedObject.attributes.title",
+      "settings": "$.associatedObject.attributes.settings.members",
+      "productSettings":"$.associatedObject.attributes.governingProduct.associatedObject.attributes.settings.members",
+    },
+    "$.associatedObject.attributes.settings.members": {
+      "title": "$.attributes.title",
+      "value": "$.attributes.value",
+      "status": "$.attributes.status",
+    },
+    "$.associatedObject.attributes.governingProduct.associatedObject.attributes.settings.members": {
+      "title": "$.attributes.title",
+      "constraints": "$.attributes.constraints",
+    }
+  }
+}
