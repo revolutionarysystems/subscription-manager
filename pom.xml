@@ -13,6 +13,7 @@
 	<modules>
         <module>core</module>
         <module>webapp</module>
+        <module>camel</module>
         <module>client-osgi</module>
         <module>models</module>
 	</modules>

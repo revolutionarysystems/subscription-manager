@@ -7,7 +7,14 @@
     </creationConstraints>
     <views>
             <settings o:name="account-settings"/>
-    </views>    
+    </views>
+    <actions>
+        <disable o:nature="disableAccount">
+            <securityConstraints>
+                <securityConstraint o:nature="isAccountOwner"/>
+            </securityConstraints>
+        </disable>
+    </actions>
     <attributes>
         <subscriptions o:nature="linkedObjects" o:type="subscription" o:link="account"/>
         <status o:nature="property"/>

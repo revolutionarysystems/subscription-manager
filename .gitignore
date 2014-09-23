@@ -1,3 +1,4 @@
 /client-osgi/target
 /core/target/
 /models/node_modules
+/camel/target
