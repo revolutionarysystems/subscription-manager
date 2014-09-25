@@ -4,8 +4,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import uk.co.revsys.objectology.action.ActionRequest;
 import uk.co.revsys.objectology.action.handler.AbstractActionHandler;
-import uk.co.revsys.objectology.action.handler.ActionInvocationException;
+import uk.co.revsys.objectology.action.handler.exception.ActionInvocationException;
 import uk.co.revsys.objectology.dao.DaoException;
+import uk.co.revsys.objectology.exception.ValidationException;
 import uk.co.revsys.objectology.model.instance.LinkedObjects;
 import uk.co.revsys.objectology.model.instance.OlogyInstance;
 import uk.co.revsys.objectology.model.instance.Property;
@@ -24,6 +25,8 @@ public class DisableAccountActionHandler extends AbstractActionHandler<DisableAc
             }
             return account;
         } catch (DaoException ex) {
+            throw new ActionInvocationException(ex);
+        } catch (ValidationException ex) {
             throw new ActionInvocationException(ex);
         }
     }
