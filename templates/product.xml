@@ -40,6 +40,7 @@
                 <attributes>
                     <title o:nature="property"/>
                     <constraints o:nature="property"/>
+                    <default o:nature="property"/>
                 </attributes>
             </memberTemplate>
         </settings>
