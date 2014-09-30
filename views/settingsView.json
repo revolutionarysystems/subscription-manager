@@ -20,6 +20,7 @@
     "$.associatedObject.attributes.governingProduct.associatedObject.attributes.settings.members": {
       "title": "$.attributes.title",
       "constraints": "$.attributes.constraints",
+      "default": "$.attributes.default",
     }
   }
 }
