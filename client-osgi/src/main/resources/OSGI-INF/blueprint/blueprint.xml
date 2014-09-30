@@ -21,12 +21,19 @@
         
         <route>
             <from uri="direct-vm://esb.service.subscriptionmanager.user.account"/>
-            <setHeader headerName="CamelHttpQuery"><simple>mainUser=${header.user}&amp;depth=3</simple></setHeader>
+            <setHeader headerName="CamelHttpQuery"><simple>mainUser=${header.user}</simple></setHeader>
             <recipientList>
 				<simple>{{service.endpoint}}/account/query?bridgeEndpoint=true&amp;throwExceptionOnFailure=false</simple>
 			</recipientList>
             <convertBodyTo type="java.lang.String"/>
             <to uri="bean:jsonPath?method=evaluate(${body}, '$[0]')"/>
+        </route>
+        
+        <route>
+            <from uri="direct-vm://esb.service.subscriptionmanager.subscription"/>
+            <recipientList>
+				<simple>{{service.endpoint}}/subscription/${header.id}?bridgeEndpoint=true&amp;throwExceptionOnFailure=false</simple>
+			</recipientList>
         </route>
         
         <route>

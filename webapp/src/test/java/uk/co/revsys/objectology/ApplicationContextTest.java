@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 public class ApplicationContextTest {
 	
@@ -30,7 +31,7 @@ public class ApplicationContextTest {
 
 	@Test
 	public void test() throws Exception {
-		new ClassPathXmlApplicationContext("applicationContextExtend.xml");
+		//new ClassPathXmlApplicationContext("WEB-INF/classes/applicationContext.xml");
 	}
 
 }
