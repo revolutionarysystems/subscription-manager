@@ -10,6 +10,7 @@ public class SubscriptionManagerComponent extends HttpProxyComponent{
     @Override
     protected void populateMappings(Map<String, Class<? extends Processor>> mappings) {
         mappings.put("disableAccount", DisableAccountProcessor.class);
+        mappings.put("settings", SettingsViewProcessor.class);
     }
     
 }
