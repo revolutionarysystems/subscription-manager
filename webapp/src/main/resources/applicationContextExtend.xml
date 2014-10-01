@@ -29,13 +29,24 @@
         </property>
     </bean>
     
-    <bean id="setDisableAccountActionConstraintNature" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+    <bean id="setDisableAccountActionNature" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="targetClass" value="uk.co.revsys.objectology.mapping.NatureMap"/>
         <property name="targetMethod" value="setNature"/>
         <property name="arguments">
             <list>
                 <value>disableAccount</value>
-                <value type="java.lang.Class">uk.co.revsys.subscription.manager.action.DisableAccountAction</value>
+                <value type="java.lang.Class">uk.co.revsys.subscription.manager.action.model.DisableAccountAction</value>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="setUpdateSettingsActionNature" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass" value="uk.co.revsys.objectology.mapping.NatureMap"/>
+        <property name="targetMethod" value="setNature"/>
+        <property name="arguments">
+            <list>
+                <value>updateSettings</value>
+                <value type="java.lang.Class">uk.co.revsys.subscription.manager.action.model.UpdateSettingsAction</value>
             </list>
         </property>
     </bean>
@@ -45,12 +56,30 @@
         <property name="targetMethod" value="setHandler"/>
         <property name="arguments">
             <list>
-                <value type="java.lang.Class">uk.co.revsys.subscription.manager.action.DisableAccountAction</value>
+                <value type="java.lang.Class">uk.co.revsys.subscription.manager.action.model.DisableAccountAction</value>
                 <ref bean="disableAccountActionHandler"/>
             </list>
         </property>
     </bean>
     
-    <bean id="disableAccountActionHandler" class="uk.co.revsys.subscription.manager.action.DisableAccountActionHandler"/>
+    <bean id="setUpdateSettingsActionHandler" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" ref="actionHandlerFactory"/>
+        <property name="targetMethod" value="setHandler"/>
+        <property name="arguments">
+            <list>
+                <value type="java.lang.Class">uk.co.revsys.subscription.manager.action.model.UpdateSettingsAction</value>
+                <ref bean="updateSettingsActionHandler"/>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="disableAccountActionHandler" class="uk.co.revsys.subscription.manager.action.handler.DisableAccountActionHandler"/>
+    
+    <bean id="updateSettingsActionHandler" class="uk.co.revsys.subscription.manager.action.handler.UpdateSettingsActionHandler">
+        <constructor-arg index="0" ref="jsonInstanceMapper"/>
+        <constructor-arg index="1" ref="constraintMap"/>
+    </bean>
+    
+    <bean id="constraintMap" class="uk.co.revsys.subscription.manager.constraint.DefaultConstraintMap"/>
 
 </beans>

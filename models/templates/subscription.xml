@@ -21,10 +21,9 @@
                 </attributes>
             </memberTemplate>
         </assets>
-        <settings o:nature="collection">
+        <settings o:nature="dictionary">
             <memberTemplate o:nature="object">
                 <attributes>
-                    <title o:nature="property"/>
                     <value o:nature="property"/>
                     <status o:nature="property"/>
                 </attributes>
@@ -32,6 +31,7 @@
         </settings>
     </attributes>
     <actions>
+        <updateSettings o:nature="updateSettings"/>
         <addAsset o:nature="addToCollection">
             <collection>assets</collection>
             <item>asset</item>

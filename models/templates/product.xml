@@ -35,10 +35,9 @@
             </memberTemplate>
         </options>
         <usesAccountTemplate o:nature="link" o:associatedType="template" o:referenceType="name"/>
-        <settings o:nature="collection">
+        <settings o:nature="dictionary">
             <memberTemplate o:nature="object">
                 <attributes>
-                    <title o:nature="property"/>
                     <constraints o:nature="property"/>
                     <default o:nature="property"/>
                 </attributes>
