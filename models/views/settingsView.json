@@ -9,18 +9,18 @@
     "$.attributes.subscriptions.objects": {
       "id": "$.associatedObject.id",
       "title": "$.associatedObject.attributes.title",
-      "settings": "$.associatedObject.attributes.settings.members",
-      "productSettings":"$.associatedObject.attributes.governingProduct.associatedObject.attributes.settings.members",
+      "settings": "$.associatedObject.attributes.settings.map",
+      "productSettings":"$.associatedObject.attributes.governingProduct.associatedObject.attributes.settings.map",
     },
-    "$.associatedObject.attributes.settings.members": {
-      "title": "$.attributes.title",
-      "value": "$.attributes.value",
-      "status": "$.attributes.status",
+    "$.associatedObject.attributes.settings.map": {
+      "title": "$.key",
+      "value": "$.value.attributes.value",
+      "status": "$.value.attributes.status",
     },
-    "$.associatedObject.attributes.governingProduct.associatedObject.attributes.settings.members": {
-      "title": "$.attributes.title",
-      "constraints": "$.attributes.constraints",
-      "default": "$.attributes.default",
+    "$.associatedObject.attributes.governingProduct.associatedObject.attributes.settings.map": {
+      "title": "$.key",
+      "constraints": "$.value.attributes.constraints",
+      "default": "$.value.attributes.default",
     }
   }
 }
